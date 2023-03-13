@@ -16,3 +16,8 @@ searchInputEl.addEventListener('blur', function() {
 });
 
 
+const badgeEl = document.querySelector('header .badges');
+
+window.addEventListener('scroll', function () {
+  console.log('scroll');
+})

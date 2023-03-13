@@ -5,6 +5,7 @@ body {
   font-weight: 400; /* 글자의 두께 */
   line-height: 1.4;/* 줄의 높이 = 16px * 1.4 */
   font-family: 'Nanum Gothic', sans-serif;
+  height: 3000px;
 }
 img {
   display: block;
@@ -24,6 +25,9 @@ a{
 header {
     background-color: #f6f5f0;
     border-bottom: 1px solid #c8c8c8;
+    position: fixed; /* 브라우저의 view 포트를 기준으로 배치를 하겠다 */
+    top: 0;
+    width: 100%;
 }
 
 header > .inner {
@@ -209,4 +213,18 @@ header .main-menu .item .item__contents .contents__texture p{
   color : #669900;
   margin: 4px 0 14px;
   
+}
+
+header .badges{
+  position: absolute;
+  top: 132px;
+  right: 120px;
+}
+
+header .badges .badge{
+  border-radius: 10px;
+  overflow: hidden;   /*이미지가 넘치지 않기 위해 */
+  margin-bottom: 12px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer; /*해당 창에 마우스를 올리면 포인터가 나오게 구현*/
 }
