@@ -21,6 +21,68 @@ a{
   position: relative; /* 위아래 0, 왼쪽오른쪽 auto를 통해 중앙 정렬 */
 }
 
+.btn{
+    width: 130px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box; /*요소의 크기 기준을 보더박스만큼 거기서 더 커지지 않게*/
+    display: block;
+    transition: .4s;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn.btn--reverse {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn.btn--reverse:hover {
+    background-color: transparent; /* 투명 */
+    color: #333;
+}
+
+.btn.btn--brown {
+    color: #592B18;
+    border-color: #592B18;
+}
+
+.btn.btn--brown:hover {
+    color: #fff;
+    background-color: #592B18;
+}
+
+.btn.btn--gold {
+    color: #D9aa8a;
+    border-color: #D9aa8a;
+}
+
+.btn.btn--gold:hover {
+    color: #fff;
+    background-color: #D9aa8a;
+}
+
+.btn.btn--white {
+    color: #fff;
+    border-color: #fff;
+}
+
+.btn.btn--white:hover {
+    color: #333;
+    background-color: #fff; 
+}
+
+
+
 /* HEARDER */
 header {
     background-color: #f6f5f0;
@@ -28,6 +90,7 @@ header {
     position: fixed; /* 브라우저의 view 포트를 기준으로 배치를 하겠다 */
     top: 0;
     width: 100%;
+    z-index: 9;
 }
 
 header > .inner {
@@ -227,4 +290,63 @@ header .badges .badge{
   margin-bottom: 12px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
   cursor: pointer; /*해당 창에 마우스를 올리면 포인터가 나오게 구현*/
+}
+
+/* VISUAL */
+.visual {
+    margin-top: 120px;
+    background-image: url("../images/visual_bg.jpg");
+    background-position: center;
+}
+
+.visual .inner{
+    height: 646px;
+    
+}
+
+.visual .title {
+    position: absolute;
+    top: 88px;
+    left: 100px;
+}
+
+.visual .title .btn{
+    position: absolute;
+    top: 259px;
+    left: 173px;
+
+}
+/* 일치선택자 */
+.visual .cup1.image{
+    position: absolute;
+    bottom: 0;
+    right: -47px;
+}
+
+.visual .cup1.text{
+    position: absolute;
+    top: 38px;
+    right: 171px;
+}
+
+.visual .cup2.image{
+    position: absolute;
+    bottom: 0;
+    right: 162px;
+}
+
+.visual .cup2.text{
+    position: absolute;
+    top: 321px;
+    right: 416px;
+}
+
+.visual .spoon {
+    position: absolute;
+    bottom: 0;
+    left: 275px;
+}
+
+.visual .fade-in {
+  opacity: 0; /* 투명도 */
 }
