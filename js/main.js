@@ -88,3 +88,29 @@ promotionToggleBtn.addEventListener('click', () => {
     promotionEl.classList.remove('hide');
   }
 });
+
+function random(min, max) {
+  // `.toFixed()`를 통해 반환된 문자 데이터를,
+  // `parseFloat()`을 통해 소수점을 가지는 숫자 데이터로 변환
+  return parseFloat((Math.random() * (max - min) + min).toFixed(2)) // math 라는 수학객체
+
+}
+
+
+function floatingObject(selector, delay, size) {
+  // gsap.to(요소, 시간 , 옵션); // 자바스크립트 애니메이션 라이브러리
+  gsap.to(
+    selector, random(1.5, 2.5), {
+    y: size, //y축
+    repeat: -1, // 반복 횟수 -1 -> 무한대
+    yoyo : true, // 원래 대로 돌리는 애니메이션
+    ease: "power1.inOut",
+    delay: random(0, delay)
+  });
+}
+
+floatingObject('.floating1', 1, 15);
+floatingObject('.floating2', .5, 15);
+floatingObject('.floating3', 1.5, 20);
+
+// 범위 랜덤 함수(소수점 2자리까지)
